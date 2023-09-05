@@ -1,4 +1,4 @@
-package com.deepakbarad.productcataloguecomposeapp.presentation.activities.screens
+package com.deepakbarad.productcataloguecomposeapp.presentation.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background

@@ -9,7 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.deepakbarad.productcataloguecomposeapp.presentation.activities.screens.CatalogueScreen
+import com.deepakbarad.productcataloguecomposeapp.presentation.screens.CatalogueScreen
 import com.deepakbarad.productcataloguecomposeapp.presentation.theme.ProductCatalogueComposeAppTheme
 import com.deepakbarad.productcataloguecomposeapp.presentation.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
