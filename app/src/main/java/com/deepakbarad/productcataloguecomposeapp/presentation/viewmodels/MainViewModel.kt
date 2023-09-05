@@ -4,6 +4,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.deepakbarad.productcataloguecomposeapp.domain.datasource.IProductDataSource
 import com.deepakbarad.productcataloguecomposeapp.domain.models.Product
 import com.deepakbarad.productcataloguecomposeapp.domain.models.UIState
 import com.deepakbarad.productcataloguecomposeapp.domain.repository.ProductRepository
@@ -16,7 +17,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val repository: ProductRepository) : ViewModel() {
+class MainViewModel @Inject constructor(private val repository: IProductDataSource) : ViewModel() {
     private var mProductData: MutableStateFlow<List<Product>> = MutableStateFlow(emptyList())
     private var mShowProgress = mutableStateOf<UIState>(UIState(false))
     val productData: MutableStateFlow<List<Product>>
