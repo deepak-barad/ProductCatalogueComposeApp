@@ -1,12 +1,9 @@
 package com.deepakbarad.productcataloguecomposeapp.data.remotedatasource
 
-import com.deepakbarad.productcataloguecomposeapp.common.MOCK_DATA
 import com.deepakbarad.productcataloguecomposeapp.common.network.IProductCatalogueApi
 import com.deepakbarad.productcataloguecomposeapp.domain.datasource.IProductDataSource
 import com.deepakbarad.productcataloguecomposeapp.domain.models.ProductCatalogue
 import com.google.gson.GsonBuilder
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class ProductRemoteDataSource @Inject constructor(private val productCatalogueApi: IProductCatalogueApi) :
