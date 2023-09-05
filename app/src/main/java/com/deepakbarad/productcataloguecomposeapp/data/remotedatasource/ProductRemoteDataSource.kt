@@ -5,6 +5,8 @@ import com.deepakbarad.productcataloguecomposeapp.common.network.IProductCatalog
 import com.deepakbarad.productcataloguecomposeapp.domain.datasource.IProductDataSource
 import com.deepakbarad.productcataloguecomposeapp.domain.models.ProductCatalogue
 import com.google.gson.GsonBuilder
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class ProductRemoteDataSource @Inject constructor(private val productCatalogueApi: IProductCatalogueApi) :
@@ -16,7 +18,7 @@ class ProductRemoteDataSource @Inject constructor(private val productCatalogueAp
         queryMap["McasTsid"] = "11394"
         queryMap["McasCtx"] = "4"
         val productCatalogue = productCatalogueApi.getProductCatalogue(queryMap).body()
-        return productCatalogue ?: ProductCatalogue(emptyList())
-        //return gson.fromJson(MOCK_DATA, ProductCatalogue::class.java)
+        return (productCatalogue ?: ProductCatalogue(emptyList()))
+        //return(gson.fromJson(MOCK_DATA, ProductCatalogue::class.java))
     }
 }
