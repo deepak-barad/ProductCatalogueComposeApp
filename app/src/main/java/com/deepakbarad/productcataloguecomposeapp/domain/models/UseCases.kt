@@ -1,0 +1,5 @@
+package com.deepakbarad.productcataloguecomposeapp.domain.models
+
+import com.deepakbarad.productcataloguecomposeapp.domain.usecases.GetProductsDataUseCase
+
+data class UseCases(val getProductsDataUseCase: GetProductsDataUseCase)
