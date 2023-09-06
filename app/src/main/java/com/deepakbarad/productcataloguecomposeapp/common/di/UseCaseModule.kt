@@ -1,6 +1,7 @@
 package com.deepakbarad.productcataloguecomposeapp.common.di
 
 import com.deepakbarad.productcataloguecomposeapp.domain.datasource.IProductDataSource
+import com.deepakbarad.productcataloguecomposeapp.domain.models.Product
 import com.deepakbarad.productcataloguecomposeapp.domain.models.UseCases
 import com.deepakbarad.productcataloguecomposeapp.domain.repository.ProductRepository
 import com.deepakbarad.productcataloguecomposeapp.domain.usecases.GetProductsDataUseCase
@@ -14,6 +15,6 @@ import dagger.hilt.components.SingletonComponent
 object UseCaseModule {
 
     @Provides
-    fun provideUseCases(productRepository: IProductDataSource): UseCases =
+    fun provideUseCases(productRepository: ProductRepository): UseCases =
         UseCases(GetProductsDataUseCase(productRepository))
 }
